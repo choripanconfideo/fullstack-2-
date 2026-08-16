@@ -1,0 +1,238 @@
+/* =========================================
+   Paleta de Colores: Lava, Lime, Green & Bean
+   ========================================= */
+:root {
+    /* Tus colores exactos */
+    --lava-red: #E42217;
+    --lemon-lime: #A9ED3D;
+    --fresh-green: #34CD3F;
+    --black-bean: #081910;
+    
+    /* Colores extra de apoyo para lectura */
+    --white: #ffffff;
+    --text-light: #dceddf; /* Un gris-verdoso muy claro para el texto general */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general oscuro con degradado muy sutil */
+body {
+    /* Degradado de Black Bean a un verde oscuro casi negro */
+    background: linear-gradient(180deg, var(--black-bean) 0%, #0d2618 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Sección Principal (Hero) */
+.hero {
+    /* Degradado intenso mezclando el Bean con el Green */
+    background: linear-gradient(135deg, var(--black-bean), #123d21, var(--fresh-green));
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+    /* Borde inferior con un degradado agresivo de verde a rojo */
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, var(--lemon-lime), var(--lava-red)) 1;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--lemon-lime);
+    box-shadow: 0 8px 30px rgba(169, 237, 61, 0.4); /* Resplandor limón */
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--lemon-lime); /* Subtítulo resaltado en verde limón */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Secciones Generales */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--lemon-lime); /* Títulos en verde limón */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    /* Subrayado con degradado a rojo para contrastar */
+    background: linear-gradient(to right, var(--lava-red), var(--fresh-green));
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+/* Cajas de contenido con efecto cristal oscuro */
+.about {
+    background: rgba(8, 25, 16, 0.6); /* Transparencia usando Black Bean */
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: -30px;
+    box-shadow: 0 10px 30px rgba(52, 205, 63, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(169, 237, 61, 0.2); /* Borde sutil limón */
+}
+
+.about p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Habilidades */
+.skills {
+    /* Degradado oscuro para el fondo de habilidades */
+    background: linear-gradient(135deg, rgba(8, 25, 16, 0.9), rgba(52, 205, 63, 0.15));
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    padding: 50px 20px;
+    margin-top: 40px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(52, 205, 63, 0.3);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    /* Degradado en tarjetas, eliminando el blanco */
+    background: linear-gradient(135deg, rgba(20, 45, 30, 0.9), rgba(8, 25, 16, 0.9));
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    transition: all 0.4s ease;
+    border: 1px solid var(--fresh-green);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    /* Al pasar el mouse, brilla con Lemon Lime */
+    box-shadow: 0 15px 30px rgba(169, 237, 61, 0.2);
+    border-color: var(--lemon-lime);
+}
+
+.skill-card i {
+    font-size: 3.5rem;
+    /* Degradado en el ícono de Limón a Verde Fresco */
+    background: linear-gradient(135deg, var(--lemon-lime), var(--fresh-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--text-light);
+}
+
+/* Footer / Contacto */
+footer {
+    /* Degradado de Bean a Green para cerrar la página */
+    background: linear-gradient(135deg, var(--black-bean) 0%, #0d2618 50%, var(--fresh-green) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px 20px;
+    border-top: 4px solid var(--lemon-lime);
+    margin-top: 60px;
+}
+
+footer h2 {
+    color: var(--white);
+}
+
+footer h2::after {
+    background: linear-gradient(to right, var(--lemon-lime), var(--white));
+}
+
+.footer-text {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.btn-github {
+    display: inline-block;
+    /* El botón usa el rojo intenso para destacar totalmente del fondo verde */
+    background: linear-gradient(135deg, var(--lava-red), #b3160e);
+    color: var(--white);
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(228, 34, 23, 0.4);
+    border: 2px solid transparent;
+}
+
+.btn-github:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 10px 25px rgba(228, 34, 23, 0.7);
+    /* Efecto brillante en rojo al pasar el mouse */
+    background: linear-gradient(135deg, #ff4136, var(--lava-red));
+}
+
+.btn-github i {
+    margin-right: 8px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 30px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .about {
+        margin-top: -20px;
+        padding: 30px 20px;
+    }
+}
