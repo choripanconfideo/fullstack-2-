@@ -286,9 +286,9 @@ footer h2::after {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 70px; /* Tamaño mucho más pequeño (puedes bajarlo a 60px si lo quieres diminuto) */
+    width: 60px; 
     z-index: 1000;
-    pointer-events: none; /* Hace que el GIF sea "fantasma" y no interfiera si haces clic por ahí */
+    pointer-events: none; 
 }
 
 
