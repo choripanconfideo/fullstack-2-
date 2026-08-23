@@ -278,3 +278,28 @@ footer h2::after {
 .skill-card:hover i {
     animation: rebotar 0.5s ease-in-out infinite;
 }
+
+/* =========================================
+   GIF Flotante en la esquina (Corregido)
+   ========================================= */
+.gif-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 70px; /* Tamaño mucho más pequeño (puedes bajarlo a 60px si lo quieres diminuto) */
+    z-index: 1000;
+    pointer-events: none; /* Hace que el GIF sea "fantasma" y no interfiera si haces clic por ahí */
+}
+
+
+.gif-flotante .tenor-gif-embed {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+
+.gif-flotante a {
+    display: none !important;
+}
