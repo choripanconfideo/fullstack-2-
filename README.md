@@ -1,9 +1,9 @@
  Portafolio | Darithza Cárdenas
 
 Este es mi portafolio web personal, desarrollado como proyecto para la asignatura *Fullstack 2*. 
-Aquí presento mi perfil profesional, mis habilidades técnicas y los proyectos en los que he trabajado.
+Aquí presento mi perfil profesional, mis habilidades técnicas y los proyectos en los que he trabajado y vaya desarrollando.
 
-# Tecnologías utilizadas
+## Tecnologías utilizadas
 
 El proyecto fue construido desde cero utilizando las bases del desarrollo web:
 * **HTML5:** Para la estructura de la página.
