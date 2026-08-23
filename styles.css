@@ -236,3 +236,46 @@ footer h2::after {
         padding: 30px 20px;
     }
 }
+/* =========================================
+   Animaciones controladas por JavaScript
+   ========================================= */
+
+/* Estado inicial (oculto y desplazado hacia abajo) */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Estado final (visible y en su lugar) */
+.show-element {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+/* Ajuste para el cursor parpadeante de la máquina de escribir */
+.subtitle::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: var(--lemon-lime);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 1. Creamos las instrucciones del salto */
+@keyframes rebotar {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-15px); 
+    }
+}
+
+/* 2. Aplicamos el salto a los íconos */
+.skill-card:hover i {
+    animation: rebotar 0.5s ease-in-out infinite;
+}
