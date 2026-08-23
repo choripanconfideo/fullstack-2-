@@ -236,9 +236,8 @@ footer h2::after {
         padding: 30px 20px;
     }
 }
-/* =========================================
-   Animaciones controladas por JavaScript
-   ========================================= */
+/* 
+   Animaciones controladas por JavaScript */
 
 /* Estado inicial (oculto y desplazado hacia abajo) */
 .hidden-element {
